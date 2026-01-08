@@ -1,66 +1,132 @@
 [
   {
-    "type": "item_group",
-    "id": "xedrawood_forest_tomb_artifact_wield",
-    "subtype": "distribution",
-    "//": "Very small chance of a powerful, non-resonant artifact",
-    "entries": [
-      {
-        "group": "nether_cult_items_wielded",
-        "artifact": {
-          "procgen_id": "nether_cult_wield",
-          "rules": { "power_level": 1250, "max_attributes": 4, "max_negative_power": -1000, "resonant": true }
-        },
-        "prob": 100
-      },
-      {
-        "group": "nether_cult_items_wielded",
-        "artifact": {
-          "procgen_id": "nether_cult_wield",
-          "rules": { "power_level": 2500, "max_attributes": 6, "max_negative_power": -1500, "resonant": true }
-        },
-        "prob": 10
-      },
-      {
-        "group": "nether_cult_items_wielded",
-        "artifact": {
-          "procgen_id": "nether_cult_wield",
-          "rules": { "power_level": 5000, "max_attributes": 8, "max_negative_power": -2500, "resonant": false }
-        },
-        "prob": 1
-      }
-    ]
+    "type": "palette",
+    "id": "tomb",
+    "terrain": {
+      ".": "t_rock_floor",
+      " ": [ [ "t_grass_dead", 15 ], [ "t_dirt", 4 ], [ "t_dirtmound", 3 ], [ "t_rock_floor_no_roof", 4 ] ],
+      "T": "t_tree_dead",
+      "R": "t_railroad_rubble",
+      "S": "t_shrub",
+      "<": "t_slope_up",
+      ">": "t_slope_down",
+      "#": "t_rock",
+      "D": [ [ "t_door_stone_c", 20 ], [ "t_door_stone_o", 1 ] ]
+    },
+    "furniture": { "H": "f_altar", "C": "f_coffin_c" },
+    "items": {
+      "H": { "item": "xedrawood_forest_tomb_artifact_wield", "chance": 100 },
+      "¢": { "item": "xedrawood_forest_tomb_artifact_worn", "chance": 33 }
+    },
+    "monster": { "x": { "monster": "mon_skeleton_animated", "chance": 50 }, "Z": { "monster": "mon_darkman", "chance": 100 } }
   },
   {
-    "type": "item_group",
-    "id": "xedrawood_forest_tomb_artifact_worn",
-    "subtype": "distribution",
-    "//": "Very small chance of a powerful, non-resonant artifact",
-    "entries": [
-      {
-        "group": "nether_cult_items_worn",
-        "artifact": {
-          "procgen_id": "nether_cult_wield",
-          "rules": { "power_level": 1250, "max_attributes": 4, "max_negative_power": -1000, "resonant": true }
-        },
-        "prob": 100
-      },
-      {
-        "group": "nether_cult_items_worn",
-        "artifact": {
-          "procgen_id": "nether_cult_wield",
-          "rules": { "power_level": 2500, "max_attributes": 6, "max_negative_power": -1500, "resonant": true }
-        },
-        "prob": 10
-      },
-      {
-        "group": "nether_cult_items_worn",
-        "artifact": {
-          "procgen_id": "nether_cult_wield",
-          "rules": { "power_level": 5000, "max_attributes": 8, "max_negative_power": -2500, "resonant": false }
-        },
-        "prob": 1
-      }
-    ]
+    "type": "palette",
+    "id": "tomb_roof",
+    "terrain": { ".": "t_rock_roof", " ": "t_open_air", ">": "t_slope_down" }
+  },
+  {
+    "type": "mapgen",
+    "om_terrain": [ "forest_tomb" ],
+    "//": "Ground level - Z-0.",
+    "object": {
+      "fill_ter": "t_rock_floor",
+      "rows": [
+        "                  S     ",
+        "            S           ",
+        "   S                    ",
+        "                    S   ",
+        "        S               ",
+        "   S            S       ",
+        "   ##<###############   ",
+        "   ##################   ",
+        " S ####C.##>>##..C###   ",
+        "   ###x..........###<S  ",
+        "   ###...##..##..C###   ",
+        "   ###.####..########   ",
+        "   ###..###..x..#####   ",
+        "   ###..C##..#...R### S ",
+        "  S####R###..########   ",
+        "   ########DD###<####   ",
+        "          TRRT     S    ",
+        "     S     RR           ",
+        "          TRRT       S  ",
+        "      S    RR           ",
+        "          TRRT          ",
+        "            R    S      ",
+        "    S      R            ",
+        "           R    S       "
+      ],
+      "palettes": [ "tomb" ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "om_terrain": [ "forest_tomb_bottom" ],
+    "//": "Underground level - Z -1.",
+    "object": {
+      "fill_ter": "t_rock_floor",
+      "rows": [
+        "########################",
+        "##¢..C##################",
+        "##..x..#################",
+        "##Cx...#################",
+        "######.#################",
+        "######.R################",
+        "######.####.......######",
+        "######.####..###.x######",
+        "#####C..C##<<##R.C######",
+        "#######.###..######C####",
+        "###......x..###....x####",
+        "###.#######..##.###.####",
+        "###.###.........###.####",
+        "###D###C###########.####",
+        "#.....#####x.###....####",
+        "#.x.x.#####......#######",
+        "#..¢..#####D############",
+        "#.x.x.##C......C########",
+        "#.....###.x..x...#######",
+        "########...HZ...########",
+        "########¢......C########",
+        "########################",
+        "########################",
+        "########################"
+      ],
+      "palettes": [ "tomb" ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "om_terrain": [ "forest_tomb_roof" ],
+    "//": "Roof level - Z +1.",
+    "object": {
+      "rows": [
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "   ..>...............   ",
+        "   ..................   ",
+        "   ..................   ",
+        "   .................>   ",
+        "   ..................   ",
+        "   ..................   ",
+        "   ..................   ",
+        "   ..................   ",
+        "   ..................   ",
+        "   .............>....   ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        "
+      ],
+      "palettes": [ "tomb_roof" ]
+    }
   }
 ]
