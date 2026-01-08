@@ -1,0 +1,12 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "xe_innawood_mysterious_places",
+    "name": "XedraWood: Mysterious Places",
+    "authors": [ "StandingStorm" ],
+    "maintainers": [ "StandingStorm" ],
+    "description": "Adds additional strange locations to XedraWood: Stone and Sorcery.",
+    "category": "content",
+    "dependencies": [ "xedra_evolved_innawoods" ]
+  }
+]

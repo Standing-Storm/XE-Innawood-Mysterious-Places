@@ -1,0 +1,24 @@
+[
+  {
+    "type": "overmap_terrain",
+    "id": "forest_tomb",
+    "name": "forest",
+    "sym": "F",
+    "color": "brown",
+    "looks_like": "cemetery_small",
+    "see_cost": "spaced_high",
+    "travel_cost_type": "structure"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "forest_tomb_roof",
+    "copy-from": "forest_tomb",
+    "travel_cost_type": "roof"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "forest_tomb_bottom",
+    "copy-from": "forest_tomb",
+    "travel_cost_type": "basement"
+  }
+]
