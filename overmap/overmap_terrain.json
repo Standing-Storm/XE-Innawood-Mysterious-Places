@@ -22,5 +22,15 @@
     "copy-from": "forest_tomb",
     "name": "ancient tomb depths",
     "travel_cost_type": "basement"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "xedrawood_ancient_temple", "xedrawood_ancient_temple_above", "xedrawood_ancient_temple_above2" ],
+    "copy-from": "highland_crossroads_temple"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "ancient_road",
+    "copy-from": "highland_road"
   }
 ]
