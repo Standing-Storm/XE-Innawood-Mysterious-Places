@@ -7,7 +7,7 @@
     "city_distance": [ 0, -1 ],
     "city_sizes": [ 0, -1 ],
     "occurrences": [ 20, 100 ],
-    "flags": [ "GLOBALLY_UNIQUE" ],
+    "flags": [ "OVERMAP_UNIQUE" ],
     "check_for_locations": [
       [ [ 0, 0, 0 ], [ "land" ] ],
       [ [ 1, 0, 0 ], [ "land" ] ],
@@ -53,6 +53,7 @@
         { "overmap": "to_invisible", "max": { "poisson": 1.5, "bounds": [ 0, 4 ] } }
       ],
       [
+        { "overmap": "no_temple", "weight": 2 },
         {
           "name": "crossroad_temple_chunk",
           "chunk": [
