@@ -4,7 +4,7 @@
     "id": "t_floor_rotted",
     "looks_like": "t_floor",
     "name": "rotten floor",
-    "description": "What would .",
+    "description": "What would have once been a sturdy wooden floor is now a half-rotten wreck.  You're not sure how safe walking on this would be.",
     "symbol": ".",
     "color": "cyan",
     "connect_groups": [ "INDOORFLOOR", "WOODFLOOR" ],
