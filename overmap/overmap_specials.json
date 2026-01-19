@@ -10,7 +10,25 @@
     "locations": [ "forest_center" ],
     "city_distance": [ 20, -1 ],
     "city_sizes": [ 0, 20 ],
-    "occurrences": [ 33, 100 ],
+    "occurrences": [ 5, 100 ],
+    "flags": [ "OVERMAP_UNIQUE" ]
+  },
+  {
+    "type": "overmap_special",
+    "id": "ruined_tower",
+    "overmaps": [
+      { "point": [ 0, 0, -1 ], "overmap": "ruined_tower_basement_north" },
+      { "point": [ 0, 0, 0 ], "overmap": "ruined_tower_ground_north" },
+      { "point": [ 0, 0, 1 ], "overmap": "ruined_tower_z1_north" },
+      { "point": [ 0, 0, 2 ], "overmap": "ruined_tower_z2_north" },
+      { "point": [ 0, 0, 3 ], "overmap": "ruined_tower_z3_north" },
+      { "point": [ 0, 0, 4 ], "overmap": "ruined_tower_z4_north" },
+      { "point": [ 0, 0, 5 ], "overmap": "ruined_tower_z5_north" }
+    ],
+    "locations": [ "wilderness" ],
+    "city_distance": [ 20, -1 ],
+    "city_sizes": [ 0, 20 ],
+    "occurrences": [ 15, 100 ],
     "flags": [ "OVERMAP_UNIQUE" ]
   }
 ]
