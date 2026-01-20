@@ -3,6 +3,6 @@
     "type": "map_extra_collection",
     "id": "forest_thick",
     "copy-from": "forest_thick",
-    "extend": { "extras": [ [ "mx_warped_tree_grove", 10 ] ] }
+    "extend": { "extras": [ [ "mx_warped_tree_grove", 10 ], [ "mx_campfire_remnants", 5 ] ] }
   }
 ]
