@@ -65,5 +65,24 @@
     "see_cost": "all_clear",
     "vision_levels": "isolated_tower",
     "travel_cost_type": "roof"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "pillar_of_flesh",
+    "name": "pillar of flesh",
+    "vision_levels": "natural_outcropping",
+    "copy-from": "corpse_bowels_empty_edge",
+    "flags": [ "RISK_HIGH" ],
+    "sym": "T"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "temple_of_flesh",
+    "copy-from": "corpse_bowels_empty_edge",
+    "vision_levels": "natural_outcropping",
+    "name": "temple of flesh",
+    "sym": "M",
+    "color": "blue",
+    "flags": [ "RISK_HIGH", "KNOWN_DOWN" ]
   }
 ]
