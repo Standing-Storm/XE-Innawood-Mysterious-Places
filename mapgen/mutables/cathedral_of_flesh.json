@@ -4,11 +4,11 @@
     "id": "cathedral_of_flesh",
     "subtype": "mutable",
     "locations": [ "subterranean_empty" ],
-    "city_distance": [ 20, 30 ],
-    "city_sizes": [ 0, 20 ],
-    "flags": [ "OVERMAP_UNIQUE" ],
-    "priority": 3,
-    "occurrences": [ 100, 100 ],
+    "city_distance": [ 0, -1 ],
+    "city_sizes": [ 0, -1 ],
+    "flags": [ "GLOBALLY_UNIQUE" ],
+    "priority": 1,
+    "occurrences": [ 10, 100 ],
     "check_for_locations_area": [
       { "type": [ "land" ], "from": [ 0, 0, 0 ], "to": [ 0, 0, 0 ] },
       { "type": [ "subterranean_empty" ], "from": [ -15, -15, -1 ], "to": [ 15, 15, -1 ] }
@@ -220,6 +220,18 @@
     ]
   },
   {
+    "type": "palette",
+    "id": "cathedral_of_flesh_monster_surface_palette",
+    "nested": {
+      "|": { "chunks": [ "nest_nm_wall_flesh_roof" ] },
+      "#": { "chunks": [ "nest_cathedral_of_flesh_wall_flesh_roof" ] },
+      "=": { "chunks": [ "nest_nm_floor_flesh_roof" ] },
+      "<": { "chunks": [ "nest_nm_slope_down_flesh_roof" ] },
+      "@": { "chunks": [ "nest_nm_wall_bone_roof" ] },
+      "T": { "chunks": [ "nest_nm_wall_teeth_bone_roof" ] }
+    }
+  },
+  {
     "type": "mapgen",
     "om_terrain": "pillar_of_flesh",
     "object": {
@@ -251,7 +263,7 @@
         "           ##           "
       ],
       "flags": [ "ERASE_ALL_BEFORE_PLACING_TERRAIN" ],
-      "palettes": [ "nether_monster_surface_palette" ]
+      "palettes": [ "cathedral_of_flesh_monster_surface_palette" ]
     }
   },
   {
@@ -262,31 +274,59 @@
       "rows": [
         "                        ",
         "                        ",
-        "                        ",
-        "                        ",
-        "                        ",
-        "                        ",
-        "                        ",
-        "         ####           ",
-        "      #####=###         ",
-        "    #####====#####      ",
-        "   ####=========####    ",
-        "   ##======<<=====##    ",
-        "   @=======<<======@    ",
-        "   @===============@    ",
-        "  @@===============@@   ",
-        " T @@=============@@ T  ",
-        " T T T===========T T T  ",
-        " T T  T=========T  T T  ",
-        "                        ",
-        "                        ",
-        "                        ",
-        "                        ",
+        "     ##          ##     ",
+        "     =##        ##=     ",
+        "    ===##      ##===    ",
+        "  #=====########=====#  ",
+        "  ##===T========T===##  ",
+        "   ##=T==========T=##   ",
+        "    ##==T======T==##    ",
+        "     #====T==T====#     ",
+        "     #===T====T===#     ",
+        "     #=====<<=====#     ",
+        "     #=====<<=====#     ",
+        "     #===T====T===#     ",
+        "     #====T==T====#     ",
+        "    ##==T======T==##    ",
+        "   ##=T==========T=##   ",
+        "  ##===T========T===##  ",
+        "  #=====########=====#  ",
+        "    ===##      ##===    ",
+        "     =##        ##=     ",
+        "     ##          ##     ",
         "                        ",
         "                        "
       ],
       "flags": [ "ERASE_ALL_BEFORE_PLACING_TERRAIN" ],
-      "palettes": [ "nether_monster_surface_palette" ]
+      "palettes": [ "cathedral_of_flesh_monster_surface_palette" ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "nest_cathedral_of_flesh_wall_flesh_roof",
+    "object": {
+      "mapgensize": [ 1, 1 ],
+      "rows": [ "%" ],
+      "terrain": { "%": "t_nm_wall_flesh" },
+      "place_nested": [
+        { "chunks": [ "nest_cathedral_of_flesh_wall_flesh_roof_unnested" ], "x": 0, "y": 0, "z": 1 },
+        { "chunks": [ "nest_cathedral_of_flesh_wall_flesh_roof_unnested" ], "x": 0, "y": 0, "z": 2 },
+        { "chunks": [ "nest_cathedral_of_flesh_wall_flesh_roof_unnested" ], "x": 0, "y": 0, "z": 3 },
+        { "chunks": [ "nest_cathedral_of_flesh_wall_flesh_roof_unnested" ], "x": 0, "y": 0, "z": 4 },
+        { "chunks": [ "nest_cathedral_of_flesh_wall_flesh_roof_unnested" ], "x": 0, "y": 0, "z": 5 },
+        { "chunks": [ "nest_cathedral_of_flesh_wall_flesh_roof_unnested" ], "x": 0, "y": 0, "z": 6 }
+      ],
+      "flags": [ "ERASE_ALL_BEFORE_PLACING_TERRAIN" ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "nest_cathedral_of_flesh_wall_flesh_roof_unnested",
+    "object": {
+      "mapgensize": [ 1, 1 ],
+      "rows": [ "%" ],
+      "terrain": { "%": "t_nm_wall_flesh" },
+      "flags": [ "ERASE_ALL_BEFORE_PLACING_TERRAIN" ]
     }
   }
 ]

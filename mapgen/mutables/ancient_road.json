@@ -6,7 +6,7 @@
     "locations": [ "land", "open_air" ],
     "city_distance": [ 0, -1 ],
     "city_sizes": [ 0, -1 ],
-    "occurrences": [ 20, 100 ],
+    "occurrences": [ 15, 100 ],
     "flags": [ "OVERMAP_UNIQUE" ],
     "check_for_locations": [
       [ [ 0, 0, 0 ], [ "land" ] ],
