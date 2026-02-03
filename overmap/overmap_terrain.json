@@ -72,6 +72,7 @@
     "name": "pillar of flesh",
     "vision_levels": "natural_outcropping",
     "copy-from": "corpse_bowels_empty_edge",
+    "looks_like": "corpse_surface",
     "flags": [ "RISK_HIGH" ],
     "sym": "T"
   },
@@ -83,6 +84,7 @@
     "name": "temple of flesh",
     "sym": "M",
     "color": "blue",
+    "looks_like": "corpse_tentacle_surface_entry",
     "flags": [ "RISK_HIGH", "KNOWN_DOWN" ]
   },
   {
